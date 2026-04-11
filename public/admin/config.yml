@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+publish_mode: editorial_workflow
+
+locale: zh_Hant
+
+site_url: https://www.yumeiot.com
+display_url: https://www.yumeiot.com
+logo_url: https://www.yumeiot.com/og-image.jpg
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: content/posts
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: 標題, widget: string }
+      - { name: date, label: 發佈日期, widget: datetime }
+      - { name: excerpt, label: 摘要, widget: text, required: false }
+      - {
+          name: tags,
+          label: 標籤,
+          widget: list,
+          required: false,
+          default: [],
+        }
+      - { name: body, label: 內文, widget: markdown }
+
+  - name: testimonials
+    label: 客戶見證
+    label_singular: 見證
+    folder: content/testimonials
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: name, label: 客戶名稱, widget: string }
+      - { name: role, label: 職稱 / 公司, widget: string, required: false }
+      - { name: date, label: 日期, widget: datetime, required: false }
+      - { name: body, label: 見證內容, widget: text }
+
+  - name: faqs
+    label: 常見問題
+    label_singular: FAQ
+    folder: content/faqs
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: question, label: 問題, widget: string }
+      - { name: order, label: 排序（數字小的在前）, widget: number, default: 10, value_type: int }
+      - { name: body, label: 答案, widget: markdown }
