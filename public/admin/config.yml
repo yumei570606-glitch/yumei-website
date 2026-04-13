@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: yumei570606-glitch/yumei-website
   branch: main
 
 media_folder: public/uploads
@@ -9,9 +10,9 @@ publish_mode: editorial_workflow
 
 locale: zh_Hant
 
-site_url: https://www.yumeiot.com
-display_url: https://www.yumeiot.com
-logo_url: https://www.yumeiot.com/og-image.jpg
+site_url: https://yumei-website.netlify.app
+display_url: https://yumei-website.netlify.app
+logo_url: https://yumei-website.netlify.app/og-image.jpg
 
 collections:
   - name: posts

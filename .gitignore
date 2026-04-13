@@ -6,3 +6,6 @@ out/
 *.log
 .DS_Store
 /public/search-index.json
+
+# Local Netlify folder
+.netlify
