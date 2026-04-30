@@ -12,6 +12,31 @@
   to = "/admin/index.html"
   status = 200
 
+# 301 redirects: 舊中文 slug → 新英文 slug
+[[redirects]]
+  from = "/posts/一直找錯人不是你的眼光不好"
+  to = "/posts/wrong-hire-not-your-fault/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/一直找錯人不是你的眼光不好/"
+  to = "/posts/wrong-hire-not-your-fault/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/%E4%B8%80%E7%9B%B4%E6%89%BE%E9%8C%AF%E4%BA%BA%E4%B8%8D%E6%98%AF%E4%BD%A0%E7%9A%84%E7%9C%BC%E5%85%89%E4%B8%8D%E5%A5%BD"
+  to = "/posts/wrong-hire-not-your-fault/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/%E4%B8%80%E7%9B%B4%E6%89%BE%E9%8C%AF%E4%BA%BA%E4%B8%8D%E6%98%AF%E4%BD%A0%E7%9A%84%E7%9C%BC%E5%85%89%E4%B8%8D%E5%A5%BD/"
+  to = "/posts/wrong-hire-not-your-fault/"
+  status = 301
+  force = true
+
 # Security headers
 [[headers]]
   for = "/*"

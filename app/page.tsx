@@ -1,19 +1,16 @@
 import Hero from './components/Hero';
 import Pain from './components/Pain';
-import Turn from './components/Turn';
 import Funnel from './components/Funnel';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Faq from './components/Faq';
 import FooterCta from './components/FooterCta';
-import { getFaqs, getTestimonials } from '@/lib/content';
+import Footer from './components/Footer';
+
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.yumeiot.com';
 
-export default async function HomePage() {
-  const faqs = await getFaqs();
-  const testimonials = await getTestimonials();
-
+export default function HomePage() {
   const personLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -46,16 +43,6 @@ export default async function HomePage() {
     areaServed: { '@type': 'City', name: '台中市' },
   };
 
-  const faqLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answerText },
-    })),
-  };
-
   return (
     <>
       <script
@@ -66,21 +53,16 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessLd) }}
       />
-      {faqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-        />
-      )}
 
       <Hero />
       <Pain />
-      <Turn />
       <Funnel />
       <About />
-      <Testimonials items={testimonials} />
-      <Faq items={faqs} />
+      <Testimonials />
+      <Faq />
       <FooterCta />
+      <Footer />
+
     </>
   );
 }
