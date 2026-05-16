@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 export default function PostsPage() {
   const posts = getPosts();
+  const [hero, ...rest] = posts;
   return (
     <section className="sec">
       <div className="c">
@@ -22,19 +23,30 @@ export default function PostsPage() {
           <h2>文章</h2>
           <p>那些我想跟你說的事。</p>
         </div>
-        <div className="post-list">
-          {posts.length === 0 ? (
-            <p style={{ textAlign: 'center', color: 'var(--muted)' }}>文章整理中。</p>
-          ) : (
-            posts.map((p) => (
-              <Link href={`/posts/${p.slug}`} key={p.slug} className="post-item">
-                <div className="meta">{p.date}</div>
-                <h3>{inlineTitle(p.title)}</h3>
-                <p>{p.excerpt}</p>
-              </Link>
-            ))
-          )}
-        </div>
+        {posts.length === 0 ? (
+          <p style={{ textAlign: 'center', color: 'var(--ink-mute)' }}>文章整理中。</p>
+        ) : (
+          <div className="post-list">
+            <Link href={`/posts/${hero.slug}`} className="post-hero">
+              <span className="eyebrow-pill"><span className="dot"></span>最新發佈</span>
+              <div className="post-hero-date">{hero.date}</div>
+              <h3 className="post-hero-title">{inlineTitle(hero.title)}</h3>
+              {hero.excerpt && <p className="post-hero-excerpt">{hero.excerpt}</p>}
+              <span className="post-hero-cta">閱讀全文 →</span>
+            </Link>
+            {rest.length > 0 && (
+              <div className="post-grid">
+                {rest.map((p) => (
+                  <Link href={`/posts/${p.slug}`} key={p.slug} className="post-grid-card">
+                    <span className="post-grid-date">{p.date}</span>
+                    <h3 className="post-grid-title">{inlineTitle(p.title)}</h3>
+                    {p.excerpt && <p className="post-grid-excerpt">{p.excerpt}</p>}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
