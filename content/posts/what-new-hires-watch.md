@@ -1,5 +1,7 @@
 ---
-title: 90天試用期，新人在意的三件事
+title: |-
+  90天試用期，
+  新人在意的三件事
 slug: what-new-hires-watch
 date: 2026-05-16T14:24:00.000+08:00
 excerpt: |-
