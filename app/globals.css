@@ -328,6 +328,7 @@ strong{color:var(--ink)}
   .sec{padding-top:72px;padding-bottom:72px}
   .hero{padding:60px 0 72px}
   .hero h1{font-size:40px;letter-spacing:-.8px}
+  .post-detail h1{font-size:28px;line-height:1.35}
   .stat-band{grid-template-columns:repeat(3,1fr)}
   .stat-num{font-size:26px}
   h2{font-size:32px}
