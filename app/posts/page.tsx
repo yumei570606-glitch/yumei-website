@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { getPosts } from '@/lib/content';
+import { getPosts, inlineTitle } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: '文章',
@@ -29,7 +29,7 @@ export default function PostsPage() {
             posts.map((p) => (
               <Link href={`/posts/${p.slug}`} key={p.slug} className="post-item">
                 <div className="meta">{p.date}</div>
-                <h3>{p.title}</h3>
+                <h3>{inlineTitle(p.title)}</h3>
                 <p>{p.excerpt}</p>
               </Link>
             ))

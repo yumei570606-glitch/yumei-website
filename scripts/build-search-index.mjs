@@ -38,7 +38,7 @@ const items = [];
     items.push({
       type: 'post',
       slug,
-      title: data.title || slug,
+      title: String(data.title || slug).replace(/\s*\n\s*/g, ' ').trim(),
       excerpt: data.excerpt || stripped.slice(0, 120),
       body: stripped,
       url: `/posts/${slug}`,

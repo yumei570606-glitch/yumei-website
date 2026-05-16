@@ -1,6 +1,7 @@
+import { Fragment } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getPost, getPosts } from '@/lib/content';
+import { getPost, getPosts, inlineTitle } from '@/lib/content';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.yumeiot.com';
 
@@ -14,13 +15,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return { title: '找不到文章' };
+  const flatTitle = inlineTitle(post.title);
   return {
-    title: post.title,
+    title: flatTitle,
     description: post.excerpt,
     alternates: { canonical: `/posts/${post.slug}` },
     openGraph: {
       type: 'article',
-      title: `${post.title} ｜ 育玫`,
+      title: `${flatTitle} ｜ 育玫`,
       description: post.excerpt,
       url: `/posts/${post.slug}`,
       publishedTime: post.date,
@@ -28,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${post.title} ｜ 育玫`,
+      title: `${flatTitle} ｜ 育玫`,
       description: post.excerpt,
     },
   };
@@ -39,10 +41,11 @@ export default async function PostPage({ params }: Props) {
   const post = await getPost(slug);
   if (!post) notFound();
 
+  const titleLines = post.title.split(/\n/).map((s) => s.trim()).filter(Boolean);
   const articleLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: post.title,
+    headline: inlineTitle(post.title),
     datePublished: post.date,
     author: { '@type': 'Person', name: '育玫' },
     publisher: { '@type': 'Organization', name: '育玫｜陪老闆看見自己公司' },
@@ -60,7 +63,14 @@ export default async function PostPage({ params }: Props) {
       <section className="sec">
         <div className="c">
           <article className="post-detail">
-            <h1>{post.title}</h1>
+            <h1>
+              {titleLines.map((line, i) => (
+                <Fragment key={i}>
+                  {i > 0 && <br />}
+                  {line}
+                </Fragment>
+              ))}
+            </h1>
             <div className="meta">{post.date}</div>
             <div className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} />
           </article>

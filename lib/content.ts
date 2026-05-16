@@ -56,6 +56,10 @@ function stripMd(md: string): string {
     .trim();
 }
 
+export function inlineTitle(t: string): string {
+  return t.replace(/\s*\n\s*/g, ' ').trim();
+}
+
 /* ---------- Posts ---------- */
 export function getPosts(): Post[] {
   const dir = path.join(root, 'posts');
