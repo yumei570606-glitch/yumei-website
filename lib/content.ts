@@ -57,7 +57,7 @@ function stripMd(md: string): string {
 }
 
 export function inlineTitle(t: string): string {
-  return t.replace(/\s*\n\s*/g, ' ').trim();
+  return t.replace(/\s*\n\s*/g, '').trim();
 }
 
 /* ---------- Posts ---------- */

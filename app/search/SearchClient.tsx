@@ -68,7 +68,7 @@ export default function SearchClient() {
         {results.map((r) => (
           <Link href={r.url} key={`${r.type}-${r.slug}`} className="s-item">
             <div className="kind">{KIND_LABEL[r.type]}</div>
-            <h3>{r.title.replace(/\s*\n\s*/g, ' ').trim()}</h3>
+            <h3>{r.title.replace(/\s*\n\s*/g, '').trim()}</h3>
             {r.excerpt && <p>{r.excerpt}</p>}
           </Link>
         ))}
