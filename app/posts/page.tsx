@@ -1,6 +1,20 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { getPosts, inlineTitle } from '@/lib/content';
+import { getPosts } from '@/lib/content';
+
+function renderTitle(t: string) {
+  return t
+    .split(/\n/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((line, i) => (
+      <Fragment key={i}>
+        {i > 0 && <br />}
+        {line}
+      </Fragment>
+    ));
+}
 
 export const metadata: Metadata = {
   title: '文章',
@@ -30,7 +44,7 @@ export default function PostsPage() {
             <Link href={`/posts/${hero.slug}`} className="post-hero">
               <span className="eyebrow-pill"><span className="dot"></span>最新發佈</span>
               <div className="post-hero-date">{hero.date}</div>
-              <h3 className="post-hero-title">{inlineTitle(hero.title)}</h3>
+              <h3 className="post-hero-title">{renderTitle(hero.title)}</h3>
               {hero.excerpt && <p className="post-hero-excerpt">{hero.excerpt}</p>}
               <span className="post-hero-cta">閱讀全文 →</span>
             </Link>
@@ -39,7 +53,7 @@ export default function PostsPage() {
                 {rest.map((p) => (
                   <Link href={`/posts/${p.slug}`} key={p.slug} className="post-grid-card">
                     <span className="post-grid-date">{p.date}</span>
-                    <h3 className="post-grid-title">{inlineTitle(p.title)}</h3>
+                    <h3 className="post-grid-title">{renderTitle(p.title)}</h3>
                     {p.excerpt && <p className="post-grid-excerpt">{p.excerpt}</p>}
                   </Link>
                 ))}
