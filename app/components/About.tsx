@@ -12,7 +12,7 @@ export default function About() {
           <div className="eyebrow">ABOUT · 為什麼是育玫</div>
           <h2>
             我不當你的顧問。<br />
-            我讓你<span className="accent">成為自己的顧問</span>。
+            我讓你<span className="accent">成為自己的顧問。</span>
           </h2>
           <p>
             這 30 年裡，我看過從一個人的工作室長成 80 人團隊的故事，也看過營收三倍成長後 18
@@ -20,7 +20,7 @@ export default function About() {
           </p>
           <p>
             我看過太多老闆，所以我知道一件事——公司會長成什麼樣子，從來不是看老闆有多努力，
-            是看老闆有沒有那雙<strong>看自己公司的眼睛</strong>。
+            是看老闆有沒有那雙<strong>看自己公司的眼睛。</strong>
           </p>
           <p>
             而那雙眼睛，是可以被陪出來的。我做的事，不是教你管理。

@@ -1,5 +1,6 @@
 ---
 title: 一直找錯人不是你的眼光不好
+slug: wrong-hire-not-your-fault
 date: 2026-04-13T14:40:00.000+08:00
 excerpt: ""
 tags: []

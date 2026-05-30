@@ -26,7 +26,7 @@ export default function Testimonials() {
         <div className="eyebrow">VOICES · 走過這段路的老闆</div>
         <h2 style={{ textWrap: 'balance' }}>
           他們沒帶走答案。<br />
-          帶走的是<span className="accent">看自己公司的眼睛</span>。
+          帶走的是<span className="accent">看自己公司的眼睛。</span>
         </h2>
         <p style={{ color: 'var(--ink-soft)', fontSize: 15, lineHeight: 1.9, marginTop: 16 }}>
           為保護隱私，以下皆為匿名化對話片段，經本人授權整理。

@@ -15,7 +15,7 @@ export default function Pain() {
           <div className="eyebrow">SELF-CHECK · 你是不是這樣的老闆</div>
           <h2>
             這些不是員工的問題。<br />
-            是「<span className="accent">你看公司的角度</span>」。
+            是「<span className="accent">你看公司的角度」。</span>
           </h2>
         </div>
         <div className="pain-header-right" style={{ textWrap: 'pretty' }}>

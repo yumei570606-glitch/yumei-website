@@ -173,7 +173,7 @@ strong{color:var(--ink)}
 .about-photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
 .about-photo-cap{margin-top:12px;font-size:14px;color:var(--ink-mute);
   font-style:italic;font-family:var(--font-serif-stack)}
-.about h2{font-size:42px;margin-bottom:32px}
+.about h2{margin-bottom:32px}
 .about p{font-size:17px;line-height:2;text-align:left;margin-bottom:16px}
 .about strong{color:var(--ink)}
 .number-grid{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;
@@ -342,7 +342,8 @@ strong{color:var(--ink)}
   .post-grid{grid-template-columns:1fr}
   .stat-band{grid-template-columns:repeat(3,1fr)}
   .stat-num{font-size:26px}
-  h2{font-size:32px}
+  h2{font-size:28px;letter-spacing:-.5px}
+  .about h2{font-size:28px;margin-bottom:24px}
   .pain-g{grid-template-columns:1fr}
   .testi-g{grid-template-columns:1fr}
   .btn{width:100%;justify-content:center}
