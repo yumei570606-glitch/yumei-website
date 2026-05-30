@@ -18,7 +18,7 @@ export default function SiteNav() {
           <Link href="/#faq" className="nav-link">FAQ</Link>
           <Link href="/posts" className="nav-link">部落格</Link>
           <a
-            href="https://appointmentform2026.netlify.app"
+            href="https://yumei-appointment.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-accent nav-cta-desktop"

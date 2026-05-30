@@ -1,4 +1,4 @@
-const CTA_URL = 'https://appointmentform2026.netlify.app';
+const CTA_URL = 'https://yumei-appointment.netlify.app';
 
 const stations = [
   {

@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const CTA_URL = 'https://appointmentform2026.netlify.app';
+const CTA_URL = 'https://yumei-appointment.netlify.app';
 
 const faqs = [
   {

@@ -26,7 +26,7 @@ export default function Hero() {
 
             <div className="hero-ctas">
               <a
-                href="https://appointmentform2026.netlify.app"
+                href="https://yumei-appointment.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-dark"

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const CTA_URL = 'https://appointmentform2026.netlify.app';
+const CTA_URL = 'https://yumei-appointment.netlify.app';
 
 export const metadata: Metadata = {
   title: '關於育玫｜陪老闆看見自己公司',
