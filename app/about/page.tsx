@@ -5,7 +5,7 @@ const CTA_URL = 'https://yumei-appointment.netlify.app';
 export const metadata: Metadata = {
   title: '關於育玫｜陪老闆看見自己公司',
   description:
-    '30 年實戰經驗，陪靠本事做起來的中小企業老闆走過組織、帶人、接班的關卡。我不當你的顧問，我讓你成為自己的顧問。',
+    '30 年實戰經驗，陪靠本事做起來的中小企業老闆走過組織、帶人、接班的關卡。我不只是你的顧問，我也讓你成為自己的顧問。',
   alternates: { canonical: '/about' },
   openGraph: {
     type: 'profile',
@@ -45,10 +45,10 @@ export default function AboutPage() {
                   textWrap: 'balance',
                 }}
               >
-                我不當你的顧問，
+                我不只是你的顧問，
                 <br />
                 <span style={{ color: 'var(--accent)' }}>
-                  我讓你成為自己的顧問。
+                  我也讓你成為自己的顧問。
                 </span>
               </h1>
               <p style={{ fontSize: 17, lineHeight: 2, marginBottom: 20 }}>

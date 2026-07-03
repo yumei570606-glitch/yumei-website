@@ -11,8 +11,8 @@ export default function About() {
         <div>
           <div className="eyebrow">ABOUT · 為什麼是育玫</div>
           <h2>
-            我不當你的顧問。<br />
-            我讓你<span className="accent">成為自己的顧問。</span>
+            我不只是你的顧問。<br />
+            我也讓你<span className="accent">成為自己的顧問。</span>
           </h2>
           <p>
             這 30 年裡，我看過從一個人的工作室長成 80 人團隊的故事，也看過營收三倍成長後 18
