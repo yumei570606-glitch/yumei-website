@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="footer-brand">
             育玫 Yumei
-            <small>陪老闆看見自己公司</small>
+            <small>老闆成長顧問｜陪老闆看見自己公司</small>
           </div>
           <div className="footer-desc">
             30 年中小企業現場實戰。<br />

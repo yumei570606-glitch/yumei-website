@@ -52,7 +52,7 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p style={{ fontSize: 17, lineHeight: 2, marginBottom: 20 }}>
-                我是育玫。<br />
+                我是育玫，老闆成長顧問。<br />
                 30 年來，我陪了超過 200 個中小企業老闆，
                 走過創業、成長、帶人、接班的每一道關卡。
               </p>
