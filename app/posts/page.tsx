@@ -18,11 +18,11 @@ function renderTitle(t: string) {
 
 export const metadata: Metadata = {
   title: '文章',
-  description: '育玫分享 30 年陪老闆看公司的故事、思考與方法。',
+  description: '育玫分享 20 多年陪老闆看公司的故事、思考與方法。',
   alternates: { canonical: '/posts' },
   openGraph: {
     title: '文章 ｜ 育玫',
-    description: '育玫分享 30 年陪老闆看公司的故事、思考與方法。',
+    description: '育玫分享 20 多年陪老闆看公司的故事、思考與方法。',
     url: '/posts',
   },
 };
