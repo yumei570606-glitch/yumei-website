@@ -85,5 +85,6 @@ tags: []
 預約一對一諮詢，我們找個時間直接聊。我陪你一起盤點，看看真正卡住你公司的，到底是什麼。
 
 延伸閱讀：
+- [交出去的事又收回來](/posts/why-delegated-work-comes-back/)
 - [一直找錯人，不是你的眼光不好](/posts/wrong-hire-not-your-fault/)
 - [90天試用期，新人在意的三件事](/posts/what-new-hires-watch/)
